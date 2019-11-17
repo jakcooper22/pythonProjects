@@ -4,7 +4,7 @@ import requests.auth
 
 data = []
 
-headers = {'User agent': 'Test Script by /u/'creds.uname}
+headers = {'User agent': 'Test Script by /u/ + \creds.uname'}
 
 client_auth = requests.auth.HTTPBasicAuth(creds.CLIENT_ID, creds.CLIENT_SECRET)
 
@@ -19,7 +19,7 @@ client.headers = headers
 
 print(response)
 
-r = client.get(r'http://www.reddit.com/user/'creds.uname)
+r = client.get(r'http://www.reddit.com/user/ + \creds.uname')
 r.text
 data = r.json()
 
