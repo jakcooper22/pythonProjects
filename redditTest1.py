@@ -21,7 +21,7 @@ print(response)
 
 r = client.get(r'http://www.reddit.com/user/ + \creds.uname')
 r.text
-data = r.json()
+# data = r.json()
 
 # print(data['data']['children'][0])
 print(data)
